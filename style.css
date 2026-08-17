@@ -1,0 +1,272 @@
+/* Global Reset & Base Styles */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    color: #333; 
+    background-color: #fff; 
+    line-height: 1.6; 
+}
+
+/* Modern Sleek Navbar */
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 8%; 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo { 
+    font-size: 22px; 
+    font-weight: 800; 
+    letter-spacing: 3px; 
+    color: #111;
+}
+
+.logo span {
+    color: #e53e3e; /* Chota sa red/modern dot */
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #4a5568; 
+    font-weight: 500; 
+    font-size: 14px; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #111;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover { 
+    color: #111; 
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+/* Hero Section */
+.hero { 
+    height: 90vh; 
+    background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: #fff; 
+    position: relative; 
+}
+
+.hero-overlay { 
+    position: absolute; 
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.3); 
+}
+
+.hero-content { 
+    z-index: 1; 
+    max-width: 600px; 
+}
+
+.hero h1 { 
+    font-size: 60px; 
+    margin-bottom: 20px; 
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #000000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+}
+
+/* Philosophy Section */
+.philosophy { 
+    padding: 100px 10%; 
+    text-align: center; 
+    background: #fdfdfd; 
+}
+
+.philo-container { 
+    max-width: 700px; 
+    margin: auto; 
+}
+
+.philo-container h2 { 
+    font-size: 32px; 
+    margin-bottom: 20px; 
+}
+
+.philo-container p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Collection Section */
+.collection { 
+    padding: 100px 10%; 
+}
+
+.collection h2 { 
+    text-align: center; 
+    font-size: 32px; 
+    margin-bottom: 60px; 
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px; 
+}
+
+.card { 
+    border: 1px solid #eee; 
+    transition: 0.3s; 
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card:hover { 
+    border-color: #333; 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Card Images Backgrounds */
+.img-box { 
+    height: 350px; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.chair { 
+    background-image: url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=800&q=80'); 
+} 
+
+.sofa { 
+    background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80'); 
+} 
+
+.table { 
+    background-image: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80'); 
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #1a202c;
+}
+
+.price {
+    font-size: 18px;
+    color: #e53e3e;
+    font-weight: 700;
+}
+
+/* Newsletter Section */
+.newsletter { 
+    padding: 100px 10%; 
+    background: #f4f4f4; 
+    text-align: center; 
+}
+
+.newsletter h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #666;
+}
+
+.input-group { 
+    margin-top: 30px; 
+}
+
+.input-group input { 
+    padding: 15px; 
+    width: 300px; 
+    border: 1px solid #ccc; 
+    outline: none;
+}
+
+.input-group button { 
+    padding: 15px 30px; 
+    background: #000; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: 600;
+}
+
+.input-group button:hover {
+    background: #333;
+}
+
+/* Clean Footer */
+.footer { 
+    padding: 50px 10%; 
+    background: #000; 
+    color: #fff; 
+    text-align: center; 
+}
+
+.footer-content p { 
+    margin: 5px 0; 
+    font-size: 13px; 
+    opacity: 0.8; 
+}
+
+.docker-badge { 
+    color: #4fd1c5; 
+    margin-top: 15px !important; 
+    font-family: monospace; 
+    border: 1px solid #4fd1c5; 
+    padding: 6px 12px; 
+    display: inline-block; 
+    border-radius: 4px;
+}

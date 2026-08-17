@@ -1,0 +1,1 @@
+console.log("Aura Living Minimalist Landing Page initialized successfully inside Docker container.");
